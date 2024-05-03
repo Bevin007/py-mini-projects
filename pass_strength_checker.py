@@ -9,8 +9,8 @@ full_of_num=False
 only_lett_in_low=False
 only_lett_in_up=False
 spec_present=False
-#function to find number exist in password or not
 
+#function to find number exist in password or not
 def num_exist(passwd):
 	global full_of_num
 	global num_present
@@ -22,7 +22,6 @@ def num_exist(passwd):
 			break
 	
 #function of finding low or up or both case in given password and full passwd is upper or lower in case
-
 def low_or_up(passwd):
 	global one_lett_in_low
 	global one_lett_in_up
@@ -51,7 +50,6 @@ def spec_or_not(passwd):
 			break
 
 #making switch case using function bassed on length of password
-
 def switch(length):
 	#case 1 when password length is 3.
 	if length==3:
@@ -167,19 +165,21 @@ def switch(length):
 			print("It is crackable within 2000000000000 years !!")
 		#case 14 when password length is 16 and above.
 	if length>=15:
-		print("It is still crackable !! but we don't have that much of time ")		
-#function to find which case to be exicuted according to length
+		print("It is still crackable !! but we don't have that much of time ")
 
-
+#Actual program starting place
+#Using while make the program execute n number of times
 while True:
+	#Geting input(password) from user 
 	passwd=input("Enter your password (between 3-18 charectors) : ")
+	#checking length of the password by len() function 
 	length=len(passwd)
+	#making condition to avoid 2 or less then 2 length of password
 	if (length<3):
 		print("Please enter your password : ")
 	else:
+		#function calling 
 		low_or_up(passwd)
 		num_exist(passwd)
 		spec_or_not(passwd)
 		switch(length)
-		break
-		
