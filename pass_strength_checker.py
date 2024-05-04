@@ -183,4 +183,3 @@ while True:
 		num_exist(passwd)
 		spec_or_not(passwd)
 		switch(length)
-		break
